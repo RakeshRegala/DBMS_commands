@@ -141,8 +141,23 @@ WHERE
 
 16) Write a query to display the employee name, department name of all employees who earn a
 commission.
+
+SELECT ename,dname
+FROM emp e,dept d
+where e.deptno=d.deptno and comm IS NOT NULL;
+
+
+
 17) Display the empno, ename, sal, and salary increased by 15%.
+
+SELECT empno,ename,sal,sal+sal*0.15 SAL_INCREASED_BY_15PERC
+FROM emp
+
+
+
 18) Display employee names and corresponding manager names
+
+
 19) Display all the departments where employee salary greater than average salary of that
 department.
 20) Display employees where length of ename is 5
