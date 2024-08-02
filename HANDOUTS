@@ -52,3 +52,22 @@ WHERE deptno=10;
 select *
 from emp
 where deptno<>30;
+
+
+
+4) Display total number of records in Emp table.
+
+select count(*)
+from emp;
+
+
+5) Display emp table with salary descending order.
+
+select *
+from emp
+order by sal desc;
+
+
+6) Display first five records in employee table.
+7) Display all the records in emp table order by ascending deptno, descending salary.
+8) Display all employees those who were joined in year 1981.
