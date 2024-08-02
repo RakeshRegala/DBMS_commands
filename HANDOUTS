@@ -120,8 +120,25 @@ from emp;
 
 
 14) Display distinct job from emp table.
+
+select distinct job
+from emp;
+
+
 15) Write a query that displays the employee’s names with the first letter capitalized and all other
 letters lowercase for all employees whose name starts with J, A, or M.
+
+SELECT
+    UPPER(SUBSTR(ename, 1, 1)) || LOWER(SUBSTR(ename, 2)) AS formatted_name
+FROM
+    emp
+WHERE
+    ename LIKE 'J%' OR
+    ename LIKE 'A%' OR
+    ename LIKE 'M%';
+
+
+
 16) Write a query to display the employee name, department name of all employees who earn a
 commission.
 17) Display the empno, ename, sal, and salary increased by 15%.
