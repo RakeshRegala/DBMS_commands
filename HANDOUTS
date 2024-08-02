@@ -89,6 +89,9 @@ from emp
 where hiredate between '31-dec-80' and '01-jan-82';
 
 9) Display employee information who don’
+
+
+
 10) Display the records in emp table where MGR in 7698,7566 and sal should be greater then
 1500
 
@@ -108,7 +111,14 @@ where sal<(select sal
 
 
 12) Display all the records in EMP table along with the rowed.
+
+select rownum,emp.*
+from emp;
+
+
 13) Write a query to display current date.
+
+
 14) Display distinct job from emp table.
 15) Write a query that displays the employee’s names with the first letter capitalized and all other
 letters lowercase for all employees whose name starts with J, A, or M.
