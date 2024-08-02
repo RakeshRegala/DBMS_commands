@@ -91,6 +91,13 @@ where hiredate between '31-dec-80' and '01-jan-82';
 9) Display employee information who don’
 10) Display the records in emp table where MGR in 7698,7566 and sal should be greater then
 1500
+
+
+select *
+from emp
+where (mgr=7698 or mgr=7566) and (sal>1500);
+
+
 11) Display all employees where their salary is less then the Ford’s salary?
 12) Display all the records in EMP table along with the rowed.
 13) Write a query to display current date.
