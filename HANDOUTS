@@ -37,9 +37,18 @@ select *
 from emp;
 
 
+
+
+
 2) Display all the records in emp table where employee belongs to deptno 10.
 
 
 SELECT *
 FROM EMP
 WHERE deptno=10;
+
+3) Display all the records in emp table where employee does not belong to deptno 30.
+
+select *
+from emp
+where deptno<>30;
