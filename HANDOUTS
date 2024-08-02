@@ -35,3 +35,11 @@ insert into emp values(7934, 'MILLER', 'CLERK', 7782, to_date('23-1-1982','dd-mm
 
 select *
 from emp;
+
+
+2) Display all the records in emp table where employee belongs to deptno 10.
+
+
+SELECT *
+FROM EMP
+WHERE deptno=10;
