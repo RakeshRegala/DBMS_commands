@@ -160,6 +160,7 @@ FROM emp
 
 19) Display all the departments where employee salary greater than average salary of that
 department.
+
 20) Display employees where length of ename is 5
 
 
@@ -177,15 +178,54 @@ where ename like 'j%s' or ename like 'J%S';
 
 
 22) Display all employees where employee does not belong to 10,20,40
+
+select *
+from emp
+where deptno<>10 and deptno<>20 and deptno<>40;
+
+
 23) Display all employees where jobs does not belong to PRESIDENT and MANAGER.
+
+
 24) Display the maximum salary in the emp table
+
+select max(sal)
+from emp
+
+
 25) Display average salary for job SALESMAN
+
+select avg(sal)
+from emp
+where job='SALESMAN';
+
+
 26) Display all ename where first character could be anything, but second character should be L.
+
+SELECT ENAME
+FROM EMP
+WHERE ENAME LIKE '_L%';
+
+
 27) Display nth highest and nth lowest salary in emp table.
+
+
 28) Display all the departments where department has 3 employees.
+
+select dname,sum(sal)
+from emp natural join dept
+group by dname;
+
 29) Display sum of salary for each department.
+
 30) Display all department with Minimum salary and maximum salary?
+
 31) Display all ename, empno, dname, loc from emp, dept table.
+
+select ename,empno,dname,loc
+from emp natural join dept;
+
+
 32) Display all the departments where department does not have any employees
 33) Display all the departments where department does have atleast one employee
 34) Display all employees those who are not managers.
