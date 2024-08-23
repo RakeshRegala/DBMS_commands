@@ -212,13 +212,20 @@ WHERE ENAME LIKE '_L%';
 
 28) Display all the departments where department has 3 employees.
 
+
+
+29) Display sum of salary for each department.
+
+
 select dname,sum(sal)
 from emp natural join dept
 group by dname;
 
-29) Display sum of salary for each department.
 
 30) Display all department with Minimum salary and maximum salary?
+
+
+
 
 31) Display all ename, empno, dname, loc from emp, dept table.
 
@@ -227,8 +234,24 @@ from emp natural join dept;
 
 
 32) Display all the departments where department does not have any employees
+
+select dname
+from dept
+where deptno=ANY(select deptno from dept
+			minus
+			select deptno from emp);
+
+
 33) Display all the departments where department does have atleast one employee
+
+select dname
+from dept
+where deptno In(select distinct deptno from emp);
+
+
 34) Display all employees those who are not managers.
+
+
 35) Display ename, deptno from emp table with format of {ename} belongs to {deptno}
 36) Display all the records in emp table. The ename should be lower case. The job first character
 should be upper case and rest of the character in job field should be lower case.
