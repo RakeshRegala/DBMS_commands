@@ -161,7 +161,21 @@ FROM emp
 19) Display all the departments where employee salary greater than average salary of that
 department.
 20) Display employees where length of ename is 5
+
+
+select ename
+from emp
+where ename LIKE '_____';
+
+
 21) Display all employees where ename start with J and ends with S
+
+select ename
+from emp
+where ename like 'j%s' or ename like 'J%S';
+
+
+
 22) Display all employees where employee does not belong to 10,20,40
 23) Display all employees where jobs does not belong to PRESIDENT and MANAGER.
 24) Display the maximum salary in the emp table
