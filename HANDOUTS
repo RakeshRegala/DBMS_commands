@@ -250,13 +250,37 @@ where deptno In(select distinct deptno from emp);
 
 34) Display all employees those who are not managers.
 
+SELECT *
+FROM emp
+WHERE empno NOT IN (
+    SELECT DISTINCT mgr
+    FROM emp
+    WHERE mgr IS NOT NULL
+);
+
+
 
 35) Display ename, deptno from emp table with format of {ename} belongs to {deptno}
+
 36) Display all the records in emp table. The ename should be lower case. The job first character
 should be upper case and rest of the character in job field should be lower case.
+
+
+
 37) Create table emp1 and copy the emp table for deptno 10 while creating the table
+
 38) Create table emp2 with same structure of emp table. Do not copy the data
+
 39) Display all the records for deptno which belongs to employee name JAMES.
+
+
+select *
+from emp
+where deptno in (select deptno
+    from emp
+    where ename='JAMES');
+
+
 40) Display all the records in emp table where salary should be less than or equal to ADAMS
 salary.
 41) Display all subordinate those who are working under BLAKE.
@@ -267,6 +291,8 @@ salary.
 46) Delete all employees those are not getting any commission.
 47) Delete the employees where employee salary is greater than average salary of his/her
 department.
+
+
 48) Rename the employee name JONES to ANDY
 
 UPDATE emp set ename='ANDY' where ename='JONES';
@@ -308,12 +334,5 @@ where loc='NEW YORK';
 
 
 
-
-
-select sal+100
-    from emp,dept
-    where emp.deptno=dept.deptno and sal>(select avg(sal)
-from emp
-group by deptno);
 
 
