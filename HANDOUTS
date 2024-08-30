@@ -269,8 +269,27 @@ salary.
 47) Delete the employees where employee salary is greater than average salary of his/her
 department.
 48) Rename the employee name JONES to ANDY
+
+UPDATE emp set ename='ANDY' where ename='JONES';
+select *
+    from emp;
+
+
+
 49) Increase the salary 5% for employee those who are earning commission less then 1000
+
+
+select sal+sal*0.05 SAL_INC_BY_5PERC
+from emp
+where comm<1000;
+
+
 98) Increase 100$ for employee who is making more then averge salary of his department.
+
+
+
+
+
 99) Increase 1% salary for employee who is making lowest salary in dept 10
 
 SELECT sal+sal*0.01 IncreasedSAL
@@ -286,5 +305,16 @@ where sal=(select min(sal)
 select comm+10 Inc_comm
 from emp natural join dept
 where loc='NEW YORK';
+
+
+
+
+
+
+select sal+100
+    from emp,dept
+    where emp.deptno=dept.deptno and sal>(select avg(sal)
+from emp
+group by deptno);
 
 
