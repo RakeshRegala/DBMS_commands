@@ -1,4 +1,4 @@
-                 HANDOUTS
+            											     HANDOUTS
 
 
 create table dept(deptno number(2), dname  varchar2(20), loc  varchar2(15),  
@@ -283,12 +283,27 @@ where deptno in (select deptno
 
 40) Display all the records in emp table where salary should be less than or equal to ADAMS
 salary.
+
+select *
+from emp
+where sal<=(select sal
+    from emp
+    where ename='ADAMS');
+
+
 41) Display all subordinate those who are working under BLAKE.
+
+
 42) Display who is making highest commission.
+
 43) Display ename, sal, grade, dname, loc for each employee.
+
 44) Display all employee whose location is DALLAS.
+
 45) Delete emp records for detpno 10 and 20.
+
 46) Delete all employees those are not getting any commission.
+
 47) Delete the employees where employee salary is greater than average salary of his/her
 department.
 
