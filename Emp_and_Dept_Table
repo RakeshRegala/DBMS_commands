@@ -293,14 +293,38 @@ where sal<=(select sal
 
 41) Display all subordinate those who are working under BLAKE.
 
+select ename
+from emp
+where mgr = (select empno
+    from emp
+    where ename='BLAKE');
+
 
 42) Display who is making highest commission.
 
-43) Display ename, sal, grade, dname, loc for each employee.
+select *
+from emp
+where comm=(select max(comm)
+    from emp);
+
+43) Display ename, sal, (grade?), dname, loc for each employee.
+
+select ename,sal,dname,loc
+from emp natural join dept;
+
+
 
 44) Display all employee whose location is DALLAS.
 
+
+select ename
+from emp e,dept d
+where e.deptno=d.deptno and d.loc='DALLAS';
+
+
 45) Delete emp records for detpno 10 and 20.
+
+
 
 46) Delete all employees those are not getting any commission.
 
