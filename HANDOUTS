@@ -272,6 +272,14 @@ department.
 49) Increase the salary 5% for employee those who are earning commission less then 1000
 98) Increase 100$ for employee who is making more then averge salary of his department.
 99) Increase 1% salary for employee who is making lowest salary in dept 10
+
+SELECT sal+sal*0.01 IncreasedSAL
+from emp
+where sal=(select min(sal)
+    from emp
+    where deptno=10);
+
+
 100) Increase commission 10$ for employees those who are located in NEW YORK.
 
 
