@@ -273,3 +273,10 @@ department.
 98) Increase 100$ for employee who is making more then averge salary of his department.
 99) Increase 1% salary for employee who is making lowest salary in dept 10
 100) Increase commission 10$ for employees those who are located in NEW YORK.
+
+
+select comm+10 Inc_comm
+from emp natural join dept
+where loc='NEW YORK';
+
+
