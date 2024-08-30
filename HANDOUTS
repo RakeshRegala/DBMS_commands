@@ -1,5 +1,4 @@
                  HANDOUTS
-https://eduskillsfoundation.org/login/
 
 
 create table dept(deptno number(2), dname  varchar2(20), loc  varchar2(15),  
