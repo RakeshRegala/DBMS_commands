@@ -350,6 +350,13 @@ where comm<1000;
 
 98) Increase 100$ for employee who is making more then averge salary of his department.
 
+select ename,sal+100
+    from emp
+WHERE sal > (
+    SELECT AVG(sal)
+    FROM emp e
+    WHERE e.deptno=emp.deptno
+);
 
 
 
