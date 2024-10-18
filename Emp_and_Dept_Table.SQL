@@ -227,7 +227,10 @@ WHERE ENAME LIKE '_L%';
 
 28) Display all the departments where department has 3 employees.
 
-
+SELECT dname
+FROM dept NATURAL JOIN emp
+GROUP BY dname
+having count(empno)=3;
 
 
 
