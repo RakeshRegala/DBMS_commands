@@ -118,6 +118,10 @@ from emp;
 13) Write a query to display current date.
 
 
+SELECT SYSDATE AS current_date FROM dual;
+
+
+
 14) Display distinct job from emp table.
 
 select distinct job
