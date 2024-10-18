@@ -157,8 +157,19 @@ FROM emp
 18) Display employee names and corresponding manager names
 
 
+select e.ename,(SELECT m.ename from emp m where m.empno=e.mgr) AS manager
+from emp e
+
+
+
 19) Display all the departments where employee salary greater than average salary of that
 department.
+
+select distinct dname
+from emp e,dept d
+where sal>(SELECT AVG(sal)
+    from emp
+    where deptno=e.deptno);
 
 20) Display employees where length of ename is 5
 
@@ -186,6 +197,11 @@ where deptno<>10 and deptno<>20 and deptno<>40;
 23) Display all employees where jobs does not belong to PRESIDENT and MANAGER.
 
 
+select ename
+from emp
+where job<>'PRESIDENT' AND job<>'MANAGER';
+
+
 24) Display the maximum salary in the emp table
 
 select max(sal)
@@ -210,6 +226,8 @@ WHERE ENAME LIKE '_L%';
 
 
 28) Display all the departments where department has 3 employees.
+
+
 
 
 
