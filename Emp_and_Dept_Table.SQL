@@ -246,6 +246,12 @@ group by dname;
 
 
 
+select dname,max(sal) as MAXIMUM,min(sal) as MINIMUM
+from emp natural join dept
+group by deptno,dname
+
+
+
 
 31) Display all ename, empno, dname, loc from emp, dept table.
 
