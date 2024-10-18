@@ -289,6 +289,15 @@ WHERE empno NOT IN (
 
 35) Display ename, deptno from emp table with format of {ename} belongs to {deptno}
 
+
+
+SELECT 
+    ename || ' belongs to ' || deptno AS formatted_output
+FROM 
+    emp;
+
+
+
 36) Display all the records in emp table. The ename should be lower case. The job first character
 should be upper case and rest of the character in job field should be lower case.
 
@@ -296,9 +305,26 @@ should be upper case and rest of the character in job field should be lower case
 
 37) Create table emp1 and copy the emp table for deptno 10 while creating the table
 
+CREATE TABLE emp1 AS
+SELECT *
+FROM emp
+WHERE deptno = 10;
+
+
+
 38) Create table emp2 with same structure of emp table. Do not copy the data
 
+CREATE TABLE emp2 AS
+SELECT *
+FROM emp
+WHERE 1 = 0;
+
+
+
 39) Display all the records for deptno which belongs to employee name JAMES.
+
+
+
 
 
 select *
