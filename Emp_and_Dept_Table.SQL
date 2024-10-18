@@ -377,12 +377,33 @@ where e.deptno=d.deptno and d.loc='DALLAS';
 
 45) Delete emp records for detpno 10 and 20.
 
+delete from emp
+where deptno=10 or deptno=20;
+
+				(OR)
+
+DELETE FROM emp
+WHERE deptno IN (10, 20);
+
 
 
 46) Delete all employees those are not getting any commission.
 
+
+select *
+from emp
+where comm is NOT NULL;
+
+
+
 47) Delete the employees where employee salary is greater than average salary of his/her
 department.
+
+
+DELETE FROM EMP e
+where sal>(select AVG(sal)
+    from emp
+    where deptno=e.deptno);
 
 
 48) Rename the employee name JONES to ANDY
