@@ -393,10 +393,9 @@ WHERE deptno IN (10, 20);
 
 46) Delete all employees those are not getting any commission.
 
+DELETE FROM emp
+WHERE commission IS NULL OR commission = 0;
 
-select *
-from emp
-where comm is NOT NULL;
 
 
 
